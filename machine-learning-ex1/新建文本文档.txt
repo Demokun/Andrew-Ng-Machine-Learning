@@ -1,0 +1,12 @@
+A = eye(5) //建立一个5x5的单位矩阵
+
+data = load('ex1data1.txt');    //也可以写成 load ex1data1.txt
+X = data(:,1); y = data(:,2);   //data(:,1) 表示读取data中第一列的所有元素
+m = length(y);                //读取引号文件中的数据，将其存储在X和y中 
+
+plot(x,y,'rx','MarkerSize',10); //图像绘制，rx 为颜色
+ylabel('Profit in $10,000s');
+xlabel('Population of City in 10,000s');
+
+X = [ones(m,1),data(:,1)] //为矩阵data添加一个全为1的列
+
